@@ -10,15 +10,11 @@ const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 const endCollection = document.querySelector('.end-collection');
 
-// function renderCardImage(arr) {
-//   const markup = arr.map(item => cardTemplate(item)).join('');
-//   gallery.insertAdjacentHTML('beforeend', markup);
-// }
 
-let lightbox = new SimpleLightbox('.photo-card a', {
+let lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
-  captionDelay: 250,
+  captionDelay: 500,
 });
 
 let currentPage = 1;
@@ -90,8 +86,11 @@ async function onClickLoadMore() {
 }
 
 function cardImages(obj) {
-  const markup = obj.map(obj => `<div class="photo-card">
+  const markup = obj.map(obj => `<a class="gallery__item" href="${obj.largeImageURL}">
+  <div class="photo-card">  
+     <div class="wrapper">
      <img src="${obj.webformatURL}" alt="${obj.tags}" loading="lazy" />
+     </div>
      <div class="info">
        <p class="info-item">
          <b>Likes: ${obj.likes}</b>
@@ -106,7 +105,7 @@ function cardImages(obj) {
          <b>Downloads: ${obj.downloads}</b>
        </p>
      </div>
-  </div>`);
+  </div>`).join('');
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
