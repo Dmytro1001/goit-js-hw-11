@@ -87,7 +87,7 @@ async function onClickLoadMore() {
 
 function cardImages(obj) {
   const markup = obj.map(obj => `<a class="gallery__item" href="${obj.largeImageURL}">
-  <div class="photo-card">  
+  <div class="photo-card post">  
      <div class="wrapper">
      <img src="${obj.webformatURL}" alt="${obj.tags}" loading="lazy" />
      </div>
@@ -109,4 +109,4 @@ function cardImages(obj) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
-// console.log('Test')
+console.log('Test')

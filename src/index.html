@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework-11</title>
     <link rel="stylesheet" href="./scss/main.scss">
 </head>
+
 <body>
     <form class="search-form" id="search-form">
-        <input class="search-form__input" type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <input class="search-form__input" type="text" name="searchQuery" autocomplete="off"
+            placeholder="Search images..." />
         <button class="search-form__button" type="submit">Search</button>
     </form>
     <!-- <section class="container-gallery">
         
     </section> -->
     <div class="container">
-            <div class="gallery">
-            </div>
-            <button class="load-more is-hidden" type="button">Load more</button>
-            <p class="end-collection is-hidden"></p>
+        <div class="gallery">
         </div>
-    
+        <button class="load-more is-hidden" type="button">Load more</button>
+        <p class="end-collection is-hidden"></p>
+    </div>
+
     <script src="./index.js" type="module"></script>
-    </body>
-    
-    </html>
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+</body>
+
+</html>
