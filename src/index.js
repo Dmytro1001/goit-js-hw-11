@@ -109,4 +109,4 @@ function cardImages(obj) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
-console.log('Test')
+// console.log('Test')
